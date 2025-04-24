@@ -19,7 +19,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Start containers
-        run: docker-compose up -d mysql
+        run: hoverkraft-tech/compose-action@v2.0.1
 
       - name: Wait for MySQL to be ready
         run: |
