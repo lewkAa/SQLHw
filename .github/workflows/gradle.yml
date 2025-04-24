@@ -25,7 +25,7 @@ jobs:
       - name: Set up Docker Compose
         uses: docker/setup-compose-action@v1
       - name: Initialize database (execute MySQL commands)
-        run: docker-compose exec -T mysql mysql -uapp -ppass app
+        run: docker compose exec  mysql mysql -uapp -ppass app
       - name: Start SUT
         # Запускаем SUT,
         # имя файла SUT будет отличаться в каждой задаче.
