@@ -34,3 +34,7 @@ test {
     systemProperty 'selenide.headless', System.getProperty('selenide.headless')
     systemProperty 'chromeoptions.prefs', System.getProperty('chromeoptions.prefs', "profile.password_manager_leak_detection=false")
 }
+
+task connectToMySQL(type: Exec) {
+    commandLine 'docker-compose', 'exec', 'mysql', 'mysql', '-uapp', '-ppass', 'app'
+}
